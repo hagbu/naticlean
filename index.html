@@ -124,6 +124,31 @@
       font-size: 0.8em;
       color: #555;
     }
+        .gallery {
+      margin-top: 40px;
+    }
+    .gallery h3 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+    }
+    .images {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .images img {
+      width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
   </style>
 </head>
 <body>
@@ -163,4 +188,5 @@
   </div>
 </body>
 </html>
+
 
