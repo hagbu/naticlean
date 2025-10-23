@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>נתיקלין | NatiClean</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/8091/8091630.png">
   <style>
     * {
       box-sizing: border-box;
@@ -148,6 +149,31 @@
       transform: scale(1.05);
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
+    .card {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .button {
+        position: relative;
+        overflow: hidden;
+      }
+      .button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.3);
+        transition: left 0.4s;
+      }
+      .button:hover::after {
+        left: 100%;
+      }
 
   </style>
 </head>
@@ -157,7 +183,12 @@
 
     <h1>נתיקלין</h1>
     <h2>NatiClean</h2>
-    <p>ניקיון מקצועי לבית ולעסק עם נתנאל אהרון</p>
+    <p>
+      נתיקלין מעניקה שירותי ניקיון מקצועיים לבית ולעסק – באמינות, באחריות ובחיוך 😊<br>
+      ניקוי דירות, משרדים, ספות, שטיחים, חלונות ועוד – הכל ברמת גימור גבוהה במיוחד.<br>
+      השירות ניתן ע"י נתנאל אהרון עם ציוד מקצועי, חומרים איכותיים ותשומת לב אמיתית לפרטים הקטנים.
+    </p>
+
 
      <div class="gallery">
       <h3>תמונות מהעבודות שלנו</h3>
@@ -191,6 +222,7 @@
   </div>
 </body>
 </html>
+
 
 
 
