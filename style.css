@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Heebo", "Arial", sans-serif;
+  color: #0d47a1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(227,242,253,0.85), rgba(255,255,255,0.9)),
+              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.card {
+  background-color: #ffffffdd;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  max-width: 460px;
+  width: 90%;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2em;
+  color: #0d47a1;
+}
+
+h2 {
+  margin: 5px 0 15px;
+  font-weight: normal;
+  color: #1976d2;
+}
+
+p {
+  margin: 0 0 25px;
+  color: #0d47a1;
+  font-size: 1.1em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+a.button {
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+a.button:hover {
+  background-color: #1565c0;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transition: left 0.4s;
+}
+
+.button:hover::after {
+  left: 100%;
+}
+
+.form-title {
+  margin-top: 25px;
+  font-size: 1.3em;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #1976d2;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button[type="submit"] {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0d47a1;
+}
+
+.email {
+  margin-top: 25px;
+  direction: ltr;
+  font-size: 0.95em;
+  color: #0d47a1;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.gallery {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery h3 {
+  color: #0d47a1;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #0d47a1;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.contact-title a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-title a:hover {
+  text-decoration: underline;
+}
+.privacy-check {
+  margin: 15px 0;
+  text-align: right;
+  font-size: 14px;
+}
+
+.privacy-check label {
+  color: #333;
+}
+
+.privacy-check a {
+  color: #0078ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.privacy-check a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0078ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
