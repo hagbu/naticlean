@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="card">
-    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/8091/8091630.png" alt="vacuum cleaner logo">
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/8091/8091630.png" alt="לוגו נתי קלין – שואב אבק">
 
     <h1>נתיקלין</h1>
     <h2>NatiClean</h2>
@@ -19,17 +19,16 @@
       השירות ניתן ע"י נתנאל אהרון עם ציוד מקצועי, חומרים איכותיים ותשומת לב אמיתית לפרטים הקטנים.
     </p>
 
-
-     <div class="gallery">
+    <div class="gallery">
       <h3>תמונות מהעבודות שלנו</h3>
       <div class="images">
-        <img src="images/cleaning1.jpg" alt="עבודת ניקיון - לפני ואחרי">
+        <img src="images/cleaning1.jpg" alt="ניקיון דירה – לפני ואחרי">
         <img src="images/cleaning2.jpg" alt="ניקוי ספה מקצועי">
       </div>
-     </div>
+    </div>
 
     <h3 class="contact-title">מוזמנים ליצור קשר בטלפון <a href="tel:0509459570">050-9459570</a></h3>
-    
+
     <div class="buttons">
       <a class="button" href="https://wa.me/972509459570" target="_blank">💬 שלח הודעה בוואטסאפ</a>
       <a class="button" href="tel:0509459570">📞 התקשר עכשיו</a>
@@ -38,32 +37,34 @@
 
     <div class="form-title">או השאירו פרטים ונחזור אליכם בהקדם</div>
 
-    <form action="https://formspree.io/f/xkgqdnpa" method="POST">
-      <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="email" name="email" placeholder="אימייל" required>
-      <input type="tel" name="phone" placeholder="טלפון" pattern="[0-9+\-\s]{6,}" required>
-      <textarea name="message" placeholder="הודעה" required></textarea>
-      <button type="submit">שלח הודעה</button>
+    <form id="contactForm" action="https://formspree.io/f/xkgqdnpa" method="POST">
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" placeholder="שם מלא" required aria-required="true">
+
+      <label for="email">אימייל</label>
+      <input type="email" id="email" name="email" placeholder="אימייל" required aria-required="true">
+
+      <label for="phone">טלפון</label>
+      <input type="tel" id="phone" name="phone" placeholder="טלפון" pattern="[0-9+\-\s]{6,}">
+
+      <label for="message">הודעה</label>
+      <textarea id="message" name="message" placeholder="הודעה" required aria-required="true"></textarea>
+
       <div class="privacy-check">
-      <input type="checkbox" id="privacy" required>
-      <label for="privacy">
-        כדי לשלוח את הפרטים יש לאשר את 
-        <a href="privacy.html" target="_blank">תנאי הפרטיות</a>
-      </label>
+        <input type="checkbox" id="privacy" required aria-describedby="privacyDesc">
+        <label for="privacy">
+          כדי לשלוח את הפרטים יש לאשר את 
+          <a href="privacy.html" target="_blank">תנאי הפרטיות</a>
+        </label>
+        <span id="privacyDesc" class="sr-only">חובה לאשר את תנאי הפרטיות לפני שליחת הטופס</span>
       </div>
+
+      <button type="submit">שלח הודעה</button>
     </form>
 
-    
-   
     <div class="email">naticlean04@gmail.com</div>
 
     <footer>© כל הזכויות שמורות לנתיקלין | NatiClean</footer>
   </div>
 </body>
 </html>
-
-
-
-
-
-
