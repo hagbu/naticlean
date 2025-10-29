@@ -31,9 +31,22 @@ body {
 }
 
 .logo {
-  width: 80px;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  width: 140px;              /* מגדיל את הלוגו */
+  height: auto;              /* שומר על פרופורציות */
+  margin-bottom: 15px;       /* קצת רווח מתחת */
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25)); /* הצללה רכה יותר */
+  transition: transform 0.3s ease; /* אנימציה קטנה */
+}
+
+.logo:hover {
+  transform: scale(1.05);    /* אפקט עדין כשעוברים עם העכבר */
+}
+
+/* כדי שיראה טוב גם במסכים קטנים */
+@media (max-width: 600px) {
+  .logo {
+    width: 110px;
+  }
 }
 
 h1 {
