@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -15,6 +16,7 @@ body {
   background: linear-gradient(135deg, rgba(227,242,253,0.85), rgba(255,255,255,0.9)),
               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
   background-attachment: fixed;
+  padding-bottom: 80px; /* כדי לא לחפוף לפוטר הקבוע */
 }
 
 .card {
@@ -145,12 +147,6 @@ button[type="submit"]:hover {
   color: #0d47a1;
 }
 
-footer {
-  margin-top: 30px;
-  font-size: 0.8em;
-  color: #555;
-}
-
 .gallery {
   margin-top: 40px;
   margin-bottom: 30px;
@@ -203,6 +199,7 @@ footer {
 .contact-title a:hover {
   text-decoration: underline;
 }
+
 .privacy-check {
   margin: 15px 0;
   text-align: right;
@@ -233,4 +230,32 @@ footer {
 
 .back-link:hover {
   text-decoration: underline;
+}
+
+/* === FOOTER קבוע === */
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(13, 71, 161, 0.95);
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.fixed-footer a {
+  color: white;
+  font-size: 1.6em;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.fixed-footer a:hover {
+  color: #90caf9;
+  transform: scale(1.2);
 }
