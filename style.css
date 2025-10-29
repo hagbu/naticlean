@@ -31,7 +31,7 @@ body {
 }
 
 .logo {
-  width: 250px;              /* מגדיל את הלוגו */
+  width: 400px;              /* מגדיל את הלוגו */
   height: auto;              /* שומר על פרופורציות */
   margin-bottom: 15px;       /* קצת רווח מתחת */
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25)); /* הצללה רכה יותר */
